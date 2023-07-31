@@ -8,7 +8,7 @@ const ProductList = () => {
     getAllPro().then(({ data }) => setProducts(data.data));
   }, []);
   return (
-    <div className="grid grid-cols-4 gap-4 max-w-[1270px] mx-auto">
+    <div className="grid grid-cols-5 gap-4 max-w-[1270px] mx-auto">
       {products.length > 0 ? (
         <ProductCard products={products} />
       ) : (

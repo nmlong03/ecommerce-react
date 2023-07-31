@@ -18,4 +18,5 @@ const deletePro = (id) => {
 const uploadImg = (files) => {
   return instance.post('/images/upload', files)
 }
+
 export {uploadImg, getAllPro, getOnePro, updatePro, deletePro, addPro };

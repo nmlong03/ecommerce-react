@@ -10,8 +10,7 @@ const ProductDetail = () => {
     
     useEffect(() => {
         getOnePro(id).then(({data}) => setProduct(data))
-    }, [])
-    console.log(product);
+    }, {})
     return (
         <form >
         <section className="pt-12 pb-24 bg-white rounded-b-10xl overflow-hidden w-[1270px] mx-auto">
@@ -99,87 +98,11 @@ const ProductDetail = () => {
                                 </span>
                             </p>
                             <p className="text-lg text-gray-400">
-                                The nulla commodo, commodo eros a lor, tristique lectus. Lorem
-                                sad 128 GB silver.
+                                {product?.desc}
                             </p>
                         </div>
-                        <div className="flex mb-6 items-center">
-                            <div className="inline-flex mr-4">
-                                <button className="mr-1">
-                                    <svg
-                                        width="20"
-                                        height="20"
-                                        viewbox="0 0 20 20"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            d="M20 7.91679H12.4167L10 0.416779L7.58333 7.91679H0L6.18335 12.3168L3.81668 19.5835L10 15.0835L16.1834 19.5835L13.8167 12.3168L20 7.91679Z"
-                                            fill="#C1C9D3"
-                                        ></path>
-                                    </svg>
-                                </button>
-                                <button className="mr-1">
-                                    <svg
-                                        width="20"
-                                        height="20"
-                                        viewbox="0 0 20 20"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            d="M20 7.91679H12.4167L10 0.416779L7.58333 7.91679H0L6.18335 12.3168L3.81668 19.5835L10 15.0835L16.1834 19.5835L13.8167 12.3168L20 7.91679Z"
-                                            fill="#C1C9D3"
-                                        ></path>
-                                    </svg>
-                                </button>
-                                <button className="mr-1">
-                                    <svg
-                                        width="20"
-                                        height="20"
-                                        viewbox="0 0 20 20"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            d="M20 7.91679H12.4167L10 0.416779L7.58333 7.91679H0L6.18335 12.3168L3.81668 19.5835L10 15.0835L16.1834 19.5835L13.8167 12.3168L20 7.91679Z"
-                                            fill="#C1C9D3"
-                                        ></path>
-                                    </svg>
-                                </button>
-                                <button className="mr-1">
-                                    <svg
-                                        width="20"
-                                        height="20"
-                                        viewbox="0 0 20 20"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            d="M20 7.91679H12.4167L10 0.416779L7.58333 7.91679H0L6.18335 12.3168L3.81668 19.5835L10 15.0835L16.1834 19.5835L13.8167 12.3168L20 7.91679Z"
-                                            fill="#C1C9D3"
-                                        ></path>
-                                    </svg>
-                                </button>
-                                <button>
-                                    <svg
-                                        width="20"
-                                        height="20"
-                                        viewbox="0 0 20 20"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            d="M20 7.91679H12.4167L10 0.416779L7.58333 7.91679H0L6.18335 12.3168L3.81668 19.5835L10 15.0835L16.1834 19.5835L13.8167 12.3168L20 7.91679Z"
-                                            fill="#C1C9D3"
-                                        ></path>
-                                    </svg>
-                                </button>
-                            </div>
-                            <span className="text-md text-gray-400">4.59</span>
-                        </div>
-                        <div className="mb-10">
-                            <h4 className="mb-3 font-heading font-medium">Qty:</h4>
+                        <div className="mb-10 flex items-center">
+                            <h4 className="mb-3 font-heading  text-xl font-medium mr-2">Số lượng:</h4>
                             <input
                                 className="w-24 px-3 py-2 text-center bg-white border-2 border-blue-500 outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 rounded-xl"
                                 type="number" min="1"
@@ -188,12 +111,12 @@ const ProductDetail = () => {
                         </div>
                         <div className="flex flex-wrap -mx-2 mb-12">
                             <div className="w-full md:w-2/3 px-2 mb-2 md:mb-0">
-                                <a
-                                    className="block py-2 px-2 leading-8 font-heading font-medium tracking-tighter text-xl text-white text-center bg-blue-500 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 hover:bg-blue-600 rounded-xl"
+                                <button
+                                    className="block py-2 px-4 leading-8 font-heading font-medium tracking-tighter text-xl text-white text-center bg-blue-500 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 hover:bg-blue-600 rounded-xl"
                                     href="#"
                                 >
-                                    Add to bag
-                                </a>
+                                    Thêm vào giỏ hàng
+                                </button>
                             </div>
                         </div>
                         <div>
